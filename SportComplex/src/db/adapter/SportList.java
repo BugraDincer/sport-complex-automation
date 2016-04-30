@@ -26,7 +26,7 @@ public class SportList extends DbTable {
 
 	@Override
 	public void parseString(String str) {
-		String[] tokens = str.split("|");
+		String[] tokens = str.split("\\|");
 		this.id = tokens[0];
 		this.name = tokens[1];
 		this.saloons = tokens[2];

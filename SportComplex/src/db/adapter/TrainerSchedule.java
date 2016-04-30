@@ -27,7 +27,7 @@ public class TrainerSchedule extends DbTable {
 
 	@Override
 	public void parseString(String str) {
-		String[] tokens = str.split("|");
+		String[] tokens = str.split("\\|");
 		date.parseString(tokens[0]);
 		sportName = tokens[1];
 		saloon = tokens[2];
