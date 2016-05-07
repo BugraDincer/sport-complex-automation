@@ -1,6 +1,6 @@
 package complex.process;
 
-public class TrainerProcess {
+public class TrainerProcess extends Process {
 
 	TrainerProcess() {
 
@@ -10,7 +10,13 @@ public class TrainerProcess {
 
 	}
 
-	public void checkPayment() {
+	public boolean checkPayment(String id) {
+		if(searchOnTable(id,"trainerlist") != null) {
+			if(trainerList.getSalary() != 0) {
+				return true;
+			}
+		}
+		return false;
 
 	}
 

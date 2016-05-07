@@ -39,7 +39,7 @@ public abstract class DbTable {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		System.out.println("please do not use this object anymore because there is no db acces for it");
+		System.out.println("please do not use this object anymore because there is no db access for it");
 	}
 
 	public String arrayListToString(ArrayList<String> l) {

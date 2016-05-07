@@ -15,8 +15,12 @@ public class MemberProcess extends Process {
 
 	}
 
-	public void payFee() {
-
+	public void payFee(String id, int payment) {
+		if(searchOnTable("memberlist",id)!=null){
+			if(memberList.getDebt()!=0){
+				memberList.setDebt(memberList.getDebt()-payment);   //ODEMEDEN SONRA UYENIN BORCUNDAN ODEME MIKTARI DUSURULUR
+			}
+		}
 	}
 
 	public void checkForWeeklySchedule() {

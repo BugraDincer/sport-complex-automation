@@ -29,7 +29,7 @@ public class SportSchedule extends DbTable {
 
 	@Override
 	public void parseString(String str) {
-		String[] tokens = str.split("\\|");
+		String[] tokens = str.split("|");
 		date.parseString(tokens[0]);
 		this.saloon = tokens[1];
 		this.memberNames = this.stringToArrayList(tokens[2]);

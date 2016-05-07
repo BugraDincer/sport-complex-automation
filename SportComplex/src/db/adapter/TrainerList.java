@@ -5,7 +5,7 @@ public class TrainerList extends DbTable {
 	private String name, id, birthYear, address, phoneNumber, certificates;
 	private int memberCount, salary, workingTime;
 	private static final String tableName = "trainerList";
-
+	
 	public TrainerList() {
 		super(tableName, null);
 	}
@@ -26,7 +26,7 @@ public class TrainerList extends DbTable {
 
 	@Override
 	public void parseString(String str) {
-		String[] tokens = str.split("\\|");
+		String[] tokens = str.split("|");
 		this.id = tokens[0];
 		this.name = tokens[1];
 		this.birthYear = tokens[2];

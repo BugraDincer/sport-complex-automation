@@ -2,7 +2,7 @@ package db.adapter;
 
 public class SportList extends DbTable {
 
-	private String name, id, saloons, healtRequirement;
+	private String name, id, saloons, healthRequirement;
 	private int trainerCount, memberCount, seanceCount;
 	private static final String tableName = "sportlist";
 
@@ -19,18 +19,18 @@ public class SportList extends DbTable {
 
 	@Override
 	public String toString() {
-		String str = id + "|" + name + "|" + saloons + "|" + healtRequirement + "|" + Integer.toString(trainerCount)
+		String str = id + "|" + name + "|" + saloons + "|" + healthRequirement + "|" + Integer.toString(trainerCount)
 				+ "|" + Integer.toString(memberCount) + "|" + Integer.toString(seanceCount);
 		return str;
 	}
 
 	@Override
 	public void parseString(String str) {
-		String[] tokens = str.split("\\|");
+		String[] tokens = str.split("|");
 		this.id = tokens[0];
 		this.name = tokens[1];
 		this.saloons = tokens[2];
-		this.healtRequirement = tokens[3];
+		this.healthRequirement = tokens[3];
 		this.trainerCount = Integer.parseInt(tokens[4]);
 		this.memberCount = Integer.parseInt(tokens[5]);
 		this.seanceCount = Integer.parseInt(tokens[6]);
@@ -61,12 +61,12 @@ public class SportList extends DbTable {
 		this.saloons = saloons;
 	}
 
-	public String getHealtRequirement() {
-		return healtRequirement;
+	public String getHealthRequirement() {
+		return healthRequirement;
 	}
 
-	public void setHealtRequirement(String healtRequirement) {
-		this.healtRequirement = healtRequirement;
+	public void setHealthRequirement(String healtRequirement) {
+		this.healthRequirement = healtRequirement;
 	}
 
 	public int getTrainerCount() {
