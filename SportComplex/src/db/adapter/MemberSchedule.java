@@ -5,7 +5,7 @@ public class MemberSchedule extends DbTable {
 	private Date date;
 	private String sportName, trainerName, saloonName;
 
-	MemberSchedule(String tableName) {
+	public MemberSchedule(String tableName) {
 		super(tableName, null);
 	}
 

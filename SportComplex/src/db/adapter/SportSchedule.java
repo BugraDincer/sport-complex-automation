@@ -9,7 +9,7 @@ public class SportSchedule extends DbTable {
 	private ArrayList<String> memberNames = new ArrayList<String>();
 	private ArrayList<String> trainerNames = new ArrayList<String>();
 
-	SportSchedule(String tableName) {
+	public SportSchedule(String tableName) {
 		super(tableName, null);
 	}
 
